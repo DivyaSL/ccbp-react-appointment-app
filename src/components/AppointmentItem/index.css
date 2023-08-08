@@ -1,0 +1,114 @@
+/* Write your CSS here */
+.each-appointment {
+  border: 1px solid #b5b7c4;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.appointment-title-date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0px;
+}
+.item-title {
+  font-size: 17px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #171f46;
+  margin-bottom: 12px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 2px;
+}
+.star-btn {
+  background-color: transparent;
+  height: 25px;
+  padding-top: 0px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+img {
+  width: 25px;
+}
+.date-text {
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #b5b7c4;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+@media (max-width: 1200px) {
+  .each-appointment {
+    padding: 12px;
+    width: 220px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .item-title {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .star-btn {
+    height: 20px;
+    width: 20px;
+  }
+  img {
+    width: 20px;
+  }
+  .date-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .each-appointment {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+  }
+  .item-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .star-btn {
+    height: 18px;
+    width: 18px;
+  }
+  img {
+    width: 18px;
+  }
+  .date-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .each-appointment {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  .item-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .star-btn {
+    height: 20px;
+    width: 20px;
+  }
+  img {
+    width: 20px;
+  }
+  .date-text {
+    font-size: 12px;
+  }
+}
