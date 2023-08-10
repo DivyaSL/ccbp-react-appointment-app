@@ -1,6 +1,7 @@
 // Write your code here
 import {Component} from 'react'
 import {v4} from 'uuid'
+import {format} from 'date-fns'
 import './index.css'
 import AppointmentItem from '../AppointmentItem'
 
@@ -24,12 +25,22 @@ class Appointments extends Component {
     event.preventDefault()
 
     const {title, selectedDate} = this.state
+    const dateObject = new Date(selectedDate)
+    const day = dateObject.getDate()
+    const month = dateObject.getMonth() + 1
+    const year = dateObject.getFullYear()
+
+    const formattedDate = format(
+      new Date(year, day, month),
+      'dd MMMM yyyy, EEEE',
+    )
     const newAppointment = {
       id: v4(),
       title,
-      selectedDate,
+      formattedDate,
       isStarred: false,
     }
+
     this.setState(prevState => ({
       appointmentsList: [...prevState.appointmentsList, newAppointment],
       title: '',
